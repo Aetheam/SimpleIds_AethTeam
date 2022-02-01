@@ -3,4 +3,7 @@ version: 0.0.1
 api: 4.0.0
 main: Yoan1680\simpleIds\Loader
 author: YoAn1680
-permissions: {Use.Ids}
+permissions:
+  Use.Ids:
+    default: false
+    description: Permission de SimpleIds
