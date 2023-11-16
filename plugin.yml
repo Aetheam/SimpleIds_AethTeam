@@ -1,9 +1,9 @@
 name: SimpleIds_AethTeam
 version: 0.0.1
-api: 4.0.0
+api: 5.0.0
 main: Yoan1680\simpleIds\Loader
-author: YoAn1680
+author: YoAn1680, JustTim
 permissions:
   Use.Ids:
-    default: false
+    default: op
     description: Permission de SimpleIds

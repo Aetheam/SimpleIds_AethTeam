@@ -2,18 +2,18 @@
 namespace Yoan1680\simpleIds;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\item\VanillaItems;
 
 class Events implements Listener{
 
 
-    public function onItemHeld(PlayerItemHeldEvent $event){
+    public function onItemHeld(PlayerItemHeldEvent $event): void {
         $player = $event->getPlayer();
         if($player->hasPermission("Use.Ids")){
             $item = $event->getItem();
-            $id = $item->getId();
-            $meta = $item->getMeta();
+            $id = $item->getTypeId();
             $name = $item->getVanillaName();
-            $player->sendActionBarMessage("§f[§6$id §f: §6$meta §f: §6$name §f]");
+            $player->sendPopup("§f[§6$id, §f: §6$name §f]");
         }
     }
 }
